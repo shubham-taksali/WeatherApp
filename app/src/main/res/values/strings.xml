@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">Weather App</string>
+    <string name="temperature_value">25*</string>
+    <string name="temperature_line">C (Feels Like 24*C)</string>
+    <string name="current">CURRENT</string>
+    <string name="humidity">HUMIDITY</string>
+    <string name="footer">Powered by Dark Sky</string>
+    <string name="humidity_value">40%</string>
+    <string name="hourly">HOURLY</string>
+    <string name="date_time">01 January, 12 PM</string>
+    <string name="temperature_forecast_value">20* C</string>
+    <string name="humidity_forecast_value">41%</string>
+    <string name="wind_forecast_value">9.91 kmph</string>
+    <string name="humidity_forecast">Humidity</string>
+    <string name="summary_forecast">Partly Sunny</string>
+    <string name="temperature_forecast">Temperature</string>
+    <string name="windspeed_forecast">Windspeed</string>
+</resources>

@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:background="@color/applicationBackground"
+    tools:context="com.mindtree.weatherapp.MainActivity">
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/currentCardView"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:backgroundTint="@color/cardBackgroundColor"
+        android:padding="20dp">
+
+        <RelativeLayout
+            android:id="@+id/currentRelativeLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/currentTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:textColor="@color/titleColor"
+                android:text="@string/current"
+                android:textStyle="bold"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/currentTemperatureValue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@id/currentTextView"
+                android:textColor="@color/textColor"
+                android:layout_alignParentTop="true"
+                android:layout_alignStart="@id/currentTextView"
+                android:layout_marginTop="38dp"
+                android:textSize="25sp" />
+
+            <TextView
+                android:id="@+id/currentTemperatureLine"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@id/currentTemperatureValue"
+                android:layout_alignParentTop="true"
+                android:layout_marginLeft="2dp"
+                android:textColor="@color/textColor"
+                android:layout_marginTop="30dp"
+                android:layout_toEndOf="@id/currentTemperatureValue"
+                android:layout_toRightOf="@id/currentTemperatureValue"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/humidityTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@id/currentTemperatureValue"
+                android:layout_alignParentTop="true"
+                android:textColor="@color/textColor"
+                android:layout_alignStart="@id/currentTemperatureValue"
+                android:layout_below="@id/currentTemperatureValue"
+                android:layout_marginTop="75dp"
+                android:text="@string/humidity"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/humidityValue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@id/humidityTextView"
+                android:layout_marginLeft="4dp"
+                android:textColor="@color/textColor"
+                android:layout_toEndOf="@id/humidityTextView"
+                android:layout_toRightOf="@id/humidityTextView"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+        </RelativeLayout>
+    </android.support.v7.widget.CardView>
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/hourlyCardView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/currentCardView"
+        android:backgroundTint="@color/cardBackgroundColor"
+        android:layout_marginBottom="20dp"
+        android:layout_marginTop="10dp">
+
+        <RelativeLayout
+            android:id="@+id/hourlyRelativeLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+
+            <TextView
+                android:id="@+id/hourlyTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:textColor="@color/titleColor"
+                android:text="@string/hourly"
+                android:textStyle="bold"
+                android:textSize="20sp" />
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/hourlyRecyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@id/hourlyTextView"
+                android:padding="5dp">
+
+            </android.support.v7.widget.RecyclerView>
+
+        </RelativeLayout>
+
+    </android.support.v7.widget.CardView>
+
+    <TextView
+        android:id="@+id/footer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:textColor="@android:color/black"
+        android:layout_alignParentRight="true"
+        android:text="@string/footer" />
+</RelativeLayout>

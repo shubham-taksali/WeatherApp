@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/row_item"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/cardBackgroundColor">
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/row_item_cardview"
+        android:layout_width="match_parent"
+        android:layout_height="75dp"
+        android:layout_marginTop="10dp"
+        android:backgroundTint="@color/forecastBackgroundCard">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <RelativeLayout
+                android:id="@+id/summary_layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight=".5">
+
+                <TextView
+                    android:id="@+id/date_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:text="@string/date_time"
+                    android:textColor="@color/textColor"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/summary"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@+id/date_time"
+                    android:layout_alignStart="@+id/date_time"
+                    android:layout_below="@+id/date_time"
+                    android:text="@string/summary_forecast"
+                    android:textColor="@color/textColor"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/temperature_layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight=".5">
+
+                <TextView
+                    android:id="@+id/temperature_line"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:textColor="@color/textColor"
+                    android:text="@string/temperature_forecast" />
+
+                <TextView
+                    android:id="@+id/temperature_value"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@id/temperature_line"
+                    android:layout_marginLeft="5dp"
+                    android:textColor="@color/textColor"
+                    android:layout_toRightOf="@id/temperature_line"
+                    android:text="@string/temperature_forecast_value"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/windspeed_line"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/temperature_line"
+                    android:layout_marginTop="5dp"
+                    android:textColor="@color/textColor"
+                    android:text="@string/windspeed_forecast" />
+
+                <TextView
+                    android:id="@+id/windspeed_value"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@id/windspeed_line"
+                    android:layout_marginLeft="5dp"
+                    android:layout_toRightOf="@id/windspeed_line"
+                    android:text="@string/wind_forecast_value"
+                    android:textColor="@color/textColor"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/humidity_line"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/windspeed_line"
+                    android:layout_marginTop="5dp"
+                    android:textColor="@color/textColor"
+                    android:text="@string/humidity_forecast" />
+
+                <TextView
+                    android:id="@+id/humidity_value"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@id/humidity_line"
+                    android:layout_marginLeft="5dp"
+                    android:layout_toRightOf="@id/humidity_line"
+                    android:text="@string/humidity_forecast_value"
+                    android:textColor="@color/textColor"
+                    android:textStyle="bold" />
+
+            </RelativeLayout>
+        </LinearLayout>
+    </android.support.v7.widget.CardView>
+
+</RelativeLayout>
