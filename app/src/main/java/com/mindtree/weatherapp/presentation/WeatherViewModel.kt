@@ -2,14 +2,16 @@ package com.mindtree.weatherapp.presentation
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.mindtree.weatherapp.data.local.entity.WeatherEntity
 import com.mindtree.weatherapp.data.repository.WeatherRepository
+import com.mindtree.weatherapp.domain.model.Weather
 import com.mindtree.weatherapp.util.Resource
 import dagger.hilt.android.lifecycle.HiltViewModel
+import kotlinx.coroutines.Job
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.launch
 import javax.inject.Inject
+import java.util.Calendar
 
 @HiltViewModel
 class WeatherViewModel @Inject constructor(

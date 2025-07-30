@@ -1,8 +1,10 @@
 package com.mindtree.weatherapp.data.repository
 
 import com.mindtree.weatherapp.data.local.WeatherDatabase
-import com.mindtree.weatherapp.data.local.entity.WeatherEntity
 import com.mindtree.weatherapp.data.remote.WeatherApi
+import com.mindtree.weatherapp.domain.mapper.toEntity
+import com.mindtree.weatherapp.domain.mapper.toWeather
+import com.mindtree.weatherapp.domain.model.Weather
 import com.mindtree.weatherapp.util.Resource
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.flow
