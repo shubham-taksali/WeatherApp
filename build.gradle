@@ -5,20 +5,19 @@ buildscript {
         mavenCentral()
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:8.1.0'
-        classpath 'org.jetbrains.kotlin:kotlin-gradle-plugin:1.9.0'
-        classpath 'com.google.dagger:hilt-android-gradle-plugin:2.47'
+        classpath 'org.jetbrains.kotlin:kotlin-gradle-plugin:2.2.0' // Assuming this is correct for your Kotlin version
+        classpath 'com.google.dagger:hilt-android-gradle-plugin:2.57'
         classpath 'com.google.android.libraries.mapsplatform.secrets-gradle-plugin:secrets-gradle-plugin:2.0.1'
     }
 }
 
-allprojects {
-    repositories {
-        google()
-        mavenCentral()
-    }
+plugins {
+    id("com.android.application") version "8.11.1" apply false
+    id("com.android.library") version "8.11.1" apply false // If you have library modules
+    id("org.jetbrains.kotlin.android") version "2.2.0" apply false // Ensure this Kotlin version is compatible with your AGP
+    id 'com.google.devtools.ksp' version '2.2.0-2.0.2' apply false // Or the KSP version compatible with your Kotlin
 }
 
-task clean(type: Delete) {
+tasks.register('clean', Delete) {
     delete rootProject.buildDir
 }
