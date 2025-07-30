@@ -1,12 +1,11 @@
 apply plugin: 'com.android.library'
 
 android {
-    compileSdkVersion 14
-    buildToolsVersion "20.0.0"
+    buildToolsVersion '36.0.0'
 
     defaultConfig {
         minSdkVersion 14
-        targetSdkVersion 20
+        targetSdkVersion 35
         versionCode 1
         versionName "1.0"
     }
@@ -17,8 +16,17 @@ android {
     }
 }
 
-dependencies {
-    compile fileTree(dir: 'libs', include: ['*.jar'])
+android {
+    compileSdk 36
+    namespace 'com.thbs.skycons.library'
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
+    } // Replace with your desired namespace
+    // ... other configurations
+}
 
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
 }
 
